@@ -6,6 +6,7 @@ function Table({data}) {
     <div className='grid'>
          {data.map(item =>(
             <ul key={item.id} className='list'>
+                 <img className='profile1' src={item.picture} alt="profile"/>
                 <li>{item.title}</li>
                 <li>{item.firstName}</li>
                 <li>{item.lastName}</li>
