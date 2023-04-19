@@ -33,7 +33,7 @@ function App() {
         <label></label>
     <input 
        type='text'
-       placeholder='Search...'
+       placeholder='Search by name....'
        className='input-text'
         onChange={(e)=> setQuery(e.target.value)}/>
     </div>

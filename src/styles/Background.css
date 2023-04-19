@@ -9,12 +9,9 @@ input{
    padding: 12px 200px;
    margin: 8px 0px;
    height: 20px;
-   border-radius: 22px;
    border: none grey;
-   box-shadow: 0 0 15px 4px rgba(253, 244, 244, 0.904);
 }
 
 input[type=text]{
-    box-shadow: 0 0 15px 4px rgba(253, 244, 244, 0.904);
     border: none;
 }
