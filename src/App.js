@@ -4,11 +4,21 @@ import './App.css';
 import Background from './Components/Background';
 import {Users} from './Components/data'
 import {useState} from 'react'
+import Table from './Components/Table';
 
 
 
 function App() {
   const [query, setQuery] = useState('')
+
+  const keys = [ 'title', 'firstName', 'lastName']
+
+  const search = (data)=>{
+    return data.filter(
+      (item) =>
+    keys.some(key=>item[key].toLowerCase().includes(query) )
+    )
+  }
   
   return (
     <div className="App"
@@ -21,21 +31,15 @@ function App() {
       <Background/>
       <div className='input-group'>
         <label></label>
-    <input type='text'
-     id='name'
-      placeholder='Search...'
+    <input 
+       type='text'
+       placeholder='Search...'
        className='input-text'
-        onChange={e=> setQuery(e.target.value)}/>
+        onChange={(e)=> setQuery(e.target.value)}/>
     </div>
-      
-      <div>
-      <ul>
-        {Users.map((user) => (
-          <li key={user.id} className='listitem'>{user.title},{user.firstName}, {user.lastName}</li>
-        ))}
-    </ul>
+      <Table data={search(Users)}/>
     </div>
-    </div>
+
   );
 }
 

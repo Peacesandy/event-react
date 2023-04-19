@@ -1,0 +1,17 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    font-weight: bold;
+    list-style-type: none;
+    padding-left: 0;
+    color: rgb(98, 96, 96);
+    font-size: 1rem;
+    text-align: left;
+}
